@@ -1,0 +1,183 @@
+<mat-toolbar color="primary" class="mat-elevation-z2">
+  <div>
+    <h1 class="mat-headline">Syam Badri</h1>
+    <p class="mat-subheading-1">Data Engineer | Software Engineer AI & ML</p>
+  </div>
+</mat-toolbar>
+
+<main class="container">
+  <section class="professional-summary">
+    <h2 class="mat-display-1">Professional Summary</h2>
+    <p class="mat-body-1">
+      Experienced software engineer with expertise in data engineering, AI/ML,
+      and full-stack development. Proven track record in developing scalable
+      data pipelines, implementing machine learning models, and creating
+      efficient web applications.
+    </p>
+  </section>
+
+  <section class="experience-section">
+    <h2 class="mat-display-1">Experience</h2>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Data Engineer</mat-panel-title>
+          <mat-panel-description>LG Electronics | Dec 2024 - Present</mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+          <li>Developed and maintained data pipelines for large-scale data processing</li>
+          <li>Implemented machine learning models for predictive analytics</li>
+          <li>Optimized database performance and query efficiency</li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Software Engineer AI & ML</mat-panel-title>
+          <mat-panel-description>E&N CORP | Jun 2024 - Dec 2024</mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+          <li>Created scalable web scraping system using Selenium WebDriver and Spyder</li>
+          <li>Developed dense vector representations using Word2Vec</li>
+          <li>Implemented RAG models with LLMs and Dynamic Prompting</li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Teaching Assistant</mat-panel-title>
+          <mat-panel-description>Database Systems | Aug 2022 - Aug 2023</mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+          <li>Improved class comprehension by 15% through adaptive instruction</li>
+          <li>Increased student assignment accuracy by 10% with targeted feedback</li>
+        </ul>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Assistant System Engineer</mat-panel-title>
+          <mat-panel-description>TCS | Jun 2021 - Jun 2022</mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+          <li>Maintained 99.9% system uptime through proactive monitoring</li>
+          <li>Improved decision-making by 20% using ELK Stack analytics</li>
+          <li>Reduced resolution time by 30% via anomaly detection automation</li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <section class="skills-section">
+    <h2 class="mat-display-1">Skills</h2>
+    <div class="skills-grid">
+      <mat-card>
+        <mat-card-title>
+          <span>Data Engineering</span>
+          <button class="llm-button" (click)="explainSkill('Data Engineering', $event.target)">✨ Deep Dive</button>
+        </mat-card-title>
+        <mat-card-content>
+          <ul>
+            <li>Apache Spark</li>
+            <li>SQL</li>
+            <li>ETL Pipelines</li>
+          </ul>
+          <div id="skill-output-Data-Engineering" class="llm-output hidden"></div>
+          <div id="skill-loading-Data-Engineering" class="loading-indicator hidden">Generating...</div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-title>
+          <span>Machine Learning</span>
+          <button class="llm-button" (click)="explainSkill('Machine Learning', $event.target)">✨ Deep Dive</button>
+        </mat-card-title>
+        <mat-card-content>
+          <ul>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>NLP</li>
+          </ul>
+          <div id="skill-output-Machine-Learning" class="llm-output hidden"></div>
+          <div id="skill-loading-Machine-Learning" class="loading-indicator hidden">Generating...</div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-title>
+          <span>Web Development</span>
+          <button class="llm-button" (click)="explainSkill('Web Development', $event.target)">✨ Deep Dive</button>
+        </mat-card-title>
+        <mat-card-content>
+          <ul>
+            <li>Angular</li>
+            <li>Node.js</li>
+            <li>Python</li>
+          </ul>
+          <div id="skill-output-Web-Development" class="llm-output hidden"></div>
+          <div id="skill-loading-Web-Development" class="loading-indicator hidden">Generating...</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="projects-section">
+    <h2 class="mat-display-1">Projects</h2>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span>Autonomous Apple Detection and Harvesting</span>
+            <button class="llm-button" (click)="generateProjectInsight('Autonomous Apple Detection and Harvesting', 'Developed an AI model for automated apple harvesting using MASK RCNN and TensorFlow. Achieved 95% accuracy in apple detection and successfully integrated with a prototype harvester.', $event.target)">✨ Project Insight</button>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p><strong>Overview:</strong> Developed an AI model for automated apple harvesting using MASK RCNN and TensorFlow.</p>
+        <p><strong>Technologies Used:</strong> TensorFlow, OpenCV, Python</p>
+        <p><strong>Impact:</strong> Achieved 95% accuracy in apple detection and successfully integrated with a prototype harvester.</p>
+        <div id="project-output-Autonomous-Apple-Detection-and-Harvesting" class="llm-output hidden"></div>
+        <div id="project-loading-Autonomous-Apple-Detection-and-Harvesting" class="loading-indicator hidden">Generating...</div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span>Forest Fire Detection</span>
+            <button class="llm-button" (click)="generateProjectInsight('Forest Fire Detection', 'Led the development of a machine learning model for early forest fire detection using ResNet50. Achieved 98% accuracy, reducing fire detection time by 60%.', $event.target)">✨ Project Insight</button>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p><strong>Overview:</strong> Led the development of a machine learning model for early forest fire detection using ResNet50.</p>
+        <p><strong>Technologies Used:</strong> ResNet50, TensorFlow, Python</p>
+        <p><strong>Impact:</strong> Achieved 98% accuracy, reducing fire detection time by 60%.</p>
+        <div id="project-output-Forest-Fire-Detection" class="llm-output hidden"></div>
+        <div id="project-loading-Forest-Fire-Detection" class="loading-indicator hidden">Generating...</div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span>Helmet Detection for Road Safety</span>
+            <button class="llm-button" (click)="generateProjectInsight('Helmet Detection for Road Safety', 'Created a system to detect helmetless motorcycle riders and automate fine imposition using Faster RCNN. Integrated with a city\'s traffic system, achieving 96% accuracy in rider detection.', $event.target)">✨ Project Insight</button>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p><strong>Overview:</strong> Created a system to detect helmetless motorcycle riders and automate fine imposition using Faster RCNN.</p>
+        <p><strong>Technologies Used:</strong> TensorFlow, Faster RCNN, Python</p>
+        <p><strong>Impact:</strong> Integrated with a city's traffic system, achieving 96% accuracy in rider detection.</p>
+        <div id="project-output-Helmet-Detection-for-Road-Safety" class="llm-output hidden"></div>
+        <div id="project-loading-Helmet-Detection-for-Road-Safety" class="loading-indicator hidden">Generating...</div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <section class="contact-section">
+    <h2 class="mat-display-1">Contact</h2>
+    <a href="mailto:badri.siva1999&#64;gmail.com" class="mat-body-1">
+      badri.siva1999&#64;gmail.com
+    </a>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 Syam Badri. All rights reserved.
+</footer>

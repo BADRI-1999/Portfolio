@@ -1,0 +1,336 @@
+/* app.component.css */
+
+/* Global Styles - These might ideally go into a global styles.css or styles.scss */
+body {
+  font-family: 'Inter', sans-serif;
+  background-size: 100px 100px; /* Size of the pattern units */
+  background-attachment: fixed; /* Keep background fixed while scrolling */
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Rest of your CSS remains the same, with slight adjustments for transparency */
+.container {
+  max-width: 900px; /* Constrain main content width */
+  margin: 0 auto;
+  padding: 48px 24px;
+  flex-grow: 1; /* Allow main content to expand */
+}
+
+/* Header Styling */
+mat-toolbar {
+  background-color: rgba(255, 255, 255, 0.9) !important; /* White background with slight more transparency */
+  color: #1f2937 !important; /* Darker text for contrast */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important; /* Softer shadow */
+  padding: 55px 0 !important; /* Increased vertical padding */
+  border-bottom-left-radius: 20px; /* Adjusted radius */
+  border-bottom-right-radius: 20px; /* Adjusted radius */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-toolbar h1.mat-headline {
+  font-size: 3rem; /* Larger font for name */
+  font-weight: 700; /* Bolder */
+  margin: 0;
+  line-height: 1.2;
+}
+
+mat-toolbar p.mat-subheading-1 {
+  font-size: 1.25rem; /* Subheading size */
+  color: #6b7280; /* Lighter gray for subtitle */
+  margin-top: 4px;
+}
+
+/* Section Headings */
+h2.mat-display-1 {
+  font-size: 2.5rem; /* Adjust display size */
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2.5rem; /* More space below heading */
+  text-align: center;
+}
+
+/* Professional Summary */
+.professional-summary {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.professional-summary .mat-body-1 {
+  max-width: 800px;
+  margin: auto;
+}
+
+.mat-body-1 {
+  font-size: 1.15rem; /* Larger body text */
+  line-height: 1.8;
+  color: #4b5563; /* Slightly darker body text */
+}
+
+/* Accordion (Experience & Projects) */
+mat-accordion {
+  display: block; /* Ensure it behaves like a block element */
+}
+
+mat-expansion-panel {
+  background-color: rgba(255, 255, 255, 0.95) !important; /* White with slight more transparency */
+  border-radius: 12px !important; /* More rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; /* Soft shadow */
+  margin-bottom: 16px; /* Space between panels */
+  border: none !important; /* Remove default border */
+  overflow: hidden; /* Ensure rounded corners are respected */
+  transition: all 0.3s ease-in-out;
+}
+
+mat-expansion-panel:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important; /* Enhance shadow on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+mat-expansion-panel.mat-expanded {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important; /* Deeper shadow when open */
+}
+
+mat-expansion-panel-header {
+  padding: 18px 24px !important; /* Adjust padding */
+  background-color: rgba(255, 255, 255, 0.95) !important; /* Ensure white header */
+  border-bottom: 1px solid #e5e7eb; /* Subtle separator */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+mat-expansion-panel.mat-expanded mat-expansion-panel-header {
+  border-bottom: 1px solid #d1d5db; /* Darker border when expanded */
+}
+
+mat-panel-title {
+  font-size: 1.25rem !important; /* Larger title */
+  font-weight: 600 !important; /* Semibold */
+  color: #1f2937 !important;
+  display: flex; /* Allow flex for button alignment */
+  align-items: center;
+  justify-content: space-between; /* Space out title and button */
+  width: 100%; /* Take full width */
+}
+
+mat-panel-description {
+  font-size: 1rem !important;
+  color: #6b7280 !important;
+  margin-left: 16px !important; /* Space between title and description */
+}
+
+mat-expansion-panel-content {
+  padding: 16px 24px 24px 24px !important; /* Padding for content */
+}
+
+mat-expansion-panel-content ul {
+  list-style: none; /* Remove default list style */
+  padding: 0;
+  margin: 0;
+}
+
+mat-expansion-panel-content ul li {
+  padding-left: 1.5em; /* Indent for custom bullet */
+  position: relative;
+  margin-bottom: 8px;
+  color: #4b5563;
+}
+
+mat-expansion-panel-content ul li::before {
+  content: '•'; /* Custom bullet point */
+  color: #4f46e5; /* Accent color for bullet */
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+mat-expansion-panel-content p {
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+mat-expansion-panel-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Cards */
+.skills-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+mat-card {
+  background-color: rgba(255, 255, 255, 0.95) !important; /* White with slight more transparency */
+  border-radius: 12px !important; /* More rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; /* Soft shadow */
+  padding: 24px !important;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 16px; /* For smaller screens when wrapping */
+  flex: 1 1 250px; /* flex-grow, flex-shrink, basis */
+  max-width: 300px;
+}
+
+mat-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-4px); /* Slight lift on hover */
+}
+
+mat-card-title {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin-bottom: 16px !important;
+  display: flex; /* Allow flex for button alignment */
+  align-items: center;
+  justify-content: space-between; /* Space out title and button */
+  width: 100%; /* Take full width */
+}
+
+mat-card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-card-content ul li {
+  padding-left: 1.5em;
+  position: relative;
+  margin-bottom: 6px;
+  color: #4b5563;
+}
+
+mat-card-content ul li::before {
+  content: '✓'; /* Checkmark bullet */
+  color: #10b981; /* Green accent for checkmark */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+}
+
+.contact-section a {
+  color: #4f46e5 !important; /* Consistent accent color for links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-section a:hover {
+  color: #3b82f6 !important; /* Slightly darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(226, 232, 240, 0.9); /* Light gray background for footer with slight more transparency */
+  color: #6b7280;
+  padding: 24px 0;
+  font-size: 0.875rem; /* Smaller font size */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-top: 64px; /* Space above footer */
+}
+
+/* LLM Button Styling */
+.llm-button {
+  background-color: #4f46e5; /* Primary accent color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto; /* Push button to the right */
+}
+
+.llm-button:hover {
+  background-color: #3b82f6; /* Slightly lighter blue on hover */
+  transform: translateY(-1px);
+}
+
+.llm-button:disabled {
+  background-color: #a78bfa; /* Lighter purple when disabled */
+  cursor: not-allowed;
+}
+
+.llm-output {
+  background-color: rgba(240, 244, 248, 0.9); /* Light blue-gray background for output with slight more transparency */
+  border-left: 4px solid #4f46e5; /* Accent border */
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #374151;
+  white-space: pre-wrap; /* Preserve whitespace and line breaks */
+  word-wrap: break-word; /* Break long words */
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  mat-toolbar h1.mat-headline {
+    font-size: 2.25rem;
+  }
+
+  mat-toolbar p.mat-subheading-1 {
+    font-size: 1rem;
+  }
+
+  h2.mat-display-1 {
+    font-size: 2rem;
+  }
+
+  mat-panel-title {
+    flex-direction: column;
+    /* Stack title and button on small screens */
+    align-items: flex-start;
+  }
+
+  mat-panel-title .llm-button {
+    margin-top: 8px;
+    margin-left: 0;
+    /* Remove auto margin when stacked */
+  }
+
+  mat-panel-description {
+    margin-left: 0 !important;
+    margin-top: 4px;
+  }
+
+  mat-card-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  mat-card-title .llm-button {
+    margin-top: 8px;
+    margin-left: 0;
+  }
+}
